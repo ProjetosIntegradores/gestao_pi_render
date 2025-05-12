@@ -1,0 +1,119 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #2c3e50; /* Azul escuro */
+    color: #ecf0f1; /* Branco acinzentado */
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header nav a {
+    color: #ecf0f1;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #3498db; /* Azul claro */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    flex-grow: 1;
+}
+
+.stats-overview {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    justify-content: space-around;
+}
+
+.stat-card {
+    background-color: #ecf0f1; /* Branco acinzentado */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex-basis: 200px; /* Base para o tamanho */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.stat-card h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #2c3e50; /* Azul escuro */
+}
+
+.stat-card p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3498db; /* Azul claro */
+}
+
+.chart-container {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff; /* Fundo branco para o gráfico */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.chart-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#lista-clientes-section {
+    margin-top: 30px;
+}
+
+#lista-clientes-section h3 {
+    color: #2c3e50;
+}
+
+#lista-clientes {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-clientes li {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: #34495e; /* Azul acinzentado */
+    color: #ecf0f1;
+    margin-top: auto; /* Empurra o rodapé para baixo */
+}

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Gestão - PI</title>
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sistema de Gestão - Projeto Integrador</h1>
+        <nav>
+            <a href="{% url 'admin:index' %}">Admin</a>
+            <a href="{% url 'dashboard' %}">Dashboard</a>
+            </nav>
+    </header>
+
+    <main class="container">
+        <section class="stats-overview">
+            <div class="stat-card">
+                <h2>Total de Clientes</h2>
+                <p>{{ total_clientes }}</p>
+            </div>
+            <div class="stat-card">
+                <h2>Total de Produtos</h2>
+                <p>{{ total_produtos }}</p>
+            </div>
+        </section>
+
+        <section class="chart-container">
+            <h2>Análise de Clientes</h2>
+            <p>Gráfico de novos clientes cadastrados por mês/ano.</p>
+            <canvas id="clientesPorMesChart" width="400" height="200"></canvas>
+        </section>
+
+        <section id="lista-clientes-section">
+            <h3>Clientes Recentes (Exemplo API)</h3>
+            <ul id="lista-clientes">
+                <li>Carregando clientes...</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; {% now "Y" %} Seu Nome/Grupo - Projeto Integrador. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Passa o endpoint do gráfico do contexto Django para o JavaScript
+        const endpointGraficoClientes = "{{ endpoint_grafico_clientes|escapejs }}";
+    </script>
+    <script src="{% static 'core/js/charts.js' %}"></script>
+</body>
+</html>
