@@ -1,5 +1,3 @@
-// gestao_pi_render/core/static/core/js/charts.js
-
 document.addEventListener('DOMContentLoaded', function() {
     // Gráfico de Clientes por Mês
     const ctxClientes = document.getElementById('clientesPorMesChart');
@@ -12,9 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 return response.json();
             })
             .then(data => {
-                if (data.labels && data.data) {
-                    new Chart(ctxClientes, {
-                        type: 'bar', // Tipo de gráfico: barra
+    if (data.labels && data.data) {
+        
+        ctxClientes.height = 300; 
+
+        new Chart(ctxClientes, {
+            type: 'bar', // Tipo de gráfico: barra
                         data: {
                             labels: data.labels, // Rótulos do eixo X (ex: "Jan/2024")
                             datasets: [{
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         },
                         options: {
                             responsive: true,
-                            maintainAspectRatio: false, // Permite definir altura e largura independentemente
+                            maintainAspectRatio: false,
                             scales: {
                                 y: {
                                     beginAtZero: true, // Começa o eixo Y no zero

@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>Sistema de Gestão - Projeto Integrador</h1>
+        <h1>Sistema de Gestão - TekTintas</h1>
         <nav>
             <a href="{% url 'admin:index' %}">Admin</a>
             <a href="{% url 'dashboard' %}">Dashboard</a>
@@ -32,11 +32,11 @@
         <section class="chart-container">
             <h2>Análise de Clientes</h2>
             <p>Gráfico de novos clientes cadastrados por mês/ano.</p>
-            <canvas id="clientesPorMesChart" width="400" height="200"></canvas>
+            <canvas id="clientesPorMesChart" width="400" height="1000"></canvas>
         </section>
 
         <section id="lista-clientes-section">
-            <h3>Clientes Recentes (Exemplo API)</h3>
+            <h3>Clientes Recentes</h3>
             <ul id="lista-clientes">
                 <li>Carregando clientes...</li>
             </ul>
@@ -45,7 +45,7 @@
     </main>
 
     <footer>
-        <p>&copy; {% now "Y" %} Seu Nome/Grupo - Projeto Integrador. Todos os direitos reservados.</p>
+        <p>&copy; {% now "Y" %} Lucas Edson - Projeto Integrador. Todos os direitos reservados.</p>
     </footer>
 
     <script>

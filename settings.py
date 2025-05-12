@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # DEBUG = False em produção! Configure como variável de ambiente no Render.
-DEBUG = os.environ.get('DJANGO_DEBUG', 'False').lower() == 'true'
+DEBUG = os.environ.get('DJANGO_DEBUG', 'false').lower() == 'true'
 
 # ALLOWED_HOSTS: Configure com o seu domínio do Render e domínios customizados.
 # Ex: ['seu-app.onrender.com', '[www.seudominio.com](https://www.seudominio.com)']
