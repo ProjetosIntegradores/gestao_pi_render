@@ -171,9 +171,6 @@ else:
 # Adiciona o host do Render aos CSRF_TRUSTED_ORIGINS se estiver no ambiente Render
 # e o frontend estiver no mesmo domínio ou subdomínio.
 # Se o frontend estiver em um domínio diferente, adicione-o explicitamente.
-if RENDER_EXTERNAL_HOSTNAME:
-    CSRF_TRUSTED_ORIGINS.append(f"https://{RENDER_EXTERNAL_HOSTNAME}")
-
 # Se o seu frontend (se houver um separado) estiver em outro domínio no Render:
 # Ex: CSRF_TRUSTED_ORIGINS.append('[https://seu-frontend.onrender.com](https://seu-frontend.onrender.com)')
 
